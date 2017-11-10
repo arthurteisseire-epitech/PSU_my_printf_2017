@@ -4,7 +4,10 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_putstr.c \
 		$(DLIB)my_puterror.c \
 		$(DLIB)my_strlen.c \
-		$(DLIB)my_printf.c
+		$(DLIB)my_printf.c \
+		$(DLIB)p_putchar.c \
+		$(DLIB)p_put_nbr.c \
+		$(DLIB)p_putstr.c
 
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a

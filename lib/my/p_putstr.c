@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-int my_putstr(char const *str);
+#include "my.h"
 
 int p_putstr(va_list ap)
 {

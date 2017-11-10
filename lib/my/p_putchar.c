@@ -5,10 +5,12 @@
 ** By Arthur Teisseire
 */
 
-void my_putchar(char c);
+#include "my.h"
 
 int p_putchar(va_list ap)
 {
-	my_putchar(va_arg(ap, char));
+	char c = va_arg(ap, int);
+
+	my_putchar(c);
 	return (1);
 }

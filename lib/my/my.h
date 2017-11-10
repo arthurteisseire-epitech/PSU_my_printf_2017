@@ -16,8 +16,8 @@ void my_putchar(char c);
 int my_put_nbr(int nb);
 int my_putstr(char const *str);
 
-void p_putchar(va_list ap);
-void p_put_nbr(va_list ap);
-void p_putstr(va_list ap);
+int p_putchar(va_list ap);
+int p_put_nbr(va_list ap);
+int p_putstr(va_list ap);
 
 #endif
