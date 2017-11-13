@@ -11,7 +11,8 @@ static const flags_t tab[] = {
 	{'c', p_putchar},
 	{'s', p_putstr},
 	{'d', p_put_nbr},
-	{'i', p_put_nbr}
+	{'i', p_put_nbr},
+	{'o', p_putoctal}
 };
 
 int my_printf(char *str, ...)

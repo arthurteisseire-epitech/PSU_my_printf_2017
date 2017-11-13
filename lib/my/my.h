@@ -24,10 +24,12 @@ int size_of_int(int nb);
 void my_putchar(char c);
 int my_put_nbr(int nb);
 int my_putstr(char const *str);
+int my_putnbr_base(int nbr, char const *base);
 
 int p_putchar(va_list ap);
 int p_put_nbr(va_list ap);
 int p_putstr(va_list ap);
+int p_putoctal(va_list ap);
 
 int exec(char *str, va_list ap);
 flags_t *init();
