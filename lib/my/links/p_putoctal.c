@@ -1,15 +1,15 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : p_puthexa_up.c
+** File Name : put_octal.c
 ** File description:
 ** By Arthur Teisseire
 */
 
-#include "my.h"
+#include "../my.h"
 
-int p_puthexa_up(va_list ap)
+int p_putoctal(va_list ap)
 {
-	char *base = "0123456789ABCDEF";
+	char *base = "01234567";
 	int nb = va_arg(ap, int);
 
 	my_putnbr_base(nb, base);

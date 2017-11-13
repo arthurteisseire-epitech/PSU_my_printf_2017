@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "my.h"
+#include "../my.h"
 
 int p_put_nbr(va_list ap)
 {
