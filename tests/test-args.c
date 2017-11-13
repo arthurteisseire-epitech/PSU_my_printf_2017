@@ -18,22 +18,28 @@ void redirect_all_std(void)
 
 Test(my_printf, string, .init = redirect_all_std)
 {
-	cr_assert(my_printf("toto et %s ont %d ans\n", "lala", -12) == 25);
-	cr_assert_stdout_eq_str(my_printf("toto et %s ont %d ans\n", "lala", -12));
+	cr_assert(my_printf("toto et %s ont %d ans\n", "lala", 12) == 24);
+	cr_assert_stdout_eq_str("toto et lala ont 12 ans\n");
+}
+
+Test(my_printf, char, .init = redirect_all_std)
+{
+	cr_assert(my_printf("Lettre: %c\n", 'a') == 10);
+	cr_assert_stdout_eq_str("Lettre: a\n");
 }
 
 Test(my_printf, octal, .init = redirect_all_std)
 {
 	int nb = 10000;
 
-	my_printf("%d en octal: %o\n", nb, nb);
-	cr_assert_stdout_eq_str(printf("%d en octal: %o\n", nb, nb));
+	cr_assert(my_printf("%d en octal: %o\n", nb, nb) == 22);
+	cr_assert_stdout_eq_str("10000 en octal: 23420\n");
 }
 
-Test(my_printf, pointeur, .init = redirect_all_std)
+Test(my_printf, hexa, .init = redirect_all_std)
 {
-	int nb = 10000;
+	int nb = 123434;
 
-	my_printf("Adresse de nb: %p\n", nb);
-	cr_assert_stdout_eq_str(printf("Adresse de nb: %p\n", nb));
+	cr_assert(my_printf("%d en hexa: %X\n", nb, nb) == 22);
+	cr_assert_stdout_eq_str("123434 en hexa: 1E22A\n");
 }
