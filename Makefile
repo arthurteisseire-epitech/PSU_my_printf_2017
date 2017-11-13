@@ -3,6 +3,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_put_nbr.c \
 		$(DLIB)my_putstr.c \
 		$(DLIB)my_putnbr_base.c \
+		$(DLIB)my_putadress.c \
 		$(DLIB)my_puterror.c \
 		$(DLIB)my_strlen.c \
 		$(DLIB)my_printf.c \
@@ -13,7 +14,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)p_puthexa_low.c \
 		$(DLIB)p_puthexa_up.c \
 		$(DLIB)p_putbin.c \
-		$(DLIB)p_putptr.c \
+		$(DLIB)p_putadress.c \
 		$(DLIB)size_of_int.c
 
 OBJ	=	$(SRC:.c=.o)
