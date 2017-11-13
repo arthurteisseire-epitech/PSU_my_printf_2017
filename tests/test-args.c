@@ -17,6 +17,6 @@ void redirect_all_std(void)
 
 Test(my_printf, disp, .init = redirect_all_std)
 {
-	my_printf("csiis", 'X', "hi", 10, -3, "plop");
-	cr_assert_stdout_eq_str("X\nhi\n10\n-3\nplop\n");
+	my_printf("toto %s\n", "lala");
+	cr_assert_stdout_eq_str("toto lala\n");
 }

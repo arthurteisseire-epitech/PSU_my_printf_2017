@@ -15,6 +15,8 @@ typedef struct flags {
 	int (*f)(va_list);
 } flags_t;
 
+int my_printf(char *str, ...);
+
 int my_puterror(char const *str);
 int my_strlen(char const *str);
 int my_printf(char *s, ...);
@@ -27,6 +29,7 @@ int p_putchar(va_list ap);
 int p_put_nbr(va_list ap);
 int p_putstr(va_list ap);
 
+void exec(char *str, va_list ap);
 flags_t *init();
 
 #endif

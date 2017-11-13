@@ -9,8 +9,5 @@
 
 int p_putstr(va_list ap)
 {
-	char *str = va_arg(ap, char *);
-
-	my_putstr(str);
-	return (my_strlen(str));
+	return (my_putstr(va_arg(ap, char *)));
 }

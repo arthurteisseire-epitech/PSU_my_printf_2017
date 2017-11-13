@@ -23,5 +23,5 @@ int my_put_nbr(int nb)
 		my_putchar(nb + '0');
 	if (isneg == 1)
 		return (-nb);
-	return nb;
+	return (nb);
 }

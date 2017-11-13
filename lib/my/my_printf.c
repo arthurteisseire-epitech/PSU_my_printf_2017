@@ -19,11 +19,25 @@ int my_printf(char *str, ...)
 	int i = 0;
 	va_list ap;
 
-	//va_start(ap, s);
+	va_start(ap, str);
 	while (*str != '\0') {
-		if (*str == '%') {}
-			//exec(str, ap);
+		if (*str == '%') {
+			str++;
+			exec(str, ap);
+			str++;
+		}
+		my_putchar(*str);
+		str++;
 	}
-	//va_end(ap);
+	va_end(ap);
 	return (0);
+}
+
+void exec(char *str, va_list ap)
+{
+	int i = 0;
+	
+	while (tab[i].flag != *str)
+		i++;
+	tab[i].f(ap);
 }
