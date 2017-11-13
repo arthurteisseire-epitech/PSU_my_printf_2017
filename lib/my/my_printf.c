@@ -7,26 +7,23 @@
 
 #include "my.h"
 
-int my_printf(char *s, ...)
+static const flags_t tab[] = {
+	{'c', p_putchar},
+	{'s', p_putstr},
+	{'d', p_put_nbr},
+	{'i', p_put_nbr}
+};
+
+int my_printf(char *str, ...)
 {
-	int it = 0;
+	int i = 0;
 	va_list ap;
 
-	va_start(ap, s);
-	while (s[it] != '\0') {
-		if (s[it] == 's')
-			my_putstr(va_arg(ap, char *));
-		else if (s[it] == 'c')
-			my_putchar(va_arg(ap, int));
-		else if (s[it] == 'i')
-			my_put_nbr(va_arg(ap, int));
-		else {
-			my_puterror("Unknown Type, Exiting\n");
-			return (84);
-		}
-		my_putchar('\n');
-		it++;
+	//va_start(ap, s);
+	while (*str != '\0') {
+		if (*str == '%') {}
+			//exec(str, ap);
 	}
-	va_end(ap);
+	//va_end(ap);
 	return (0);
 }

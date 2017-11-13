@@ -1,10 +1,17 @@
+/*
+** EPITECH PROJECT, 2017
+** File Name : my.h
+** File description:
+** By Arthur Teisseire
+*/
+
 #ifndef MY_H
 #define MY_H
 
 #include <stdarg.h>
 
 typedef struct flags {
-	char *flag;
+	char flag;
 	int (*f)(va_list);
 } flags_t;
 
@@ -19,5 +26,7 @@ int my_putstr(char const *str);
 int p_putchar(va_list ap);
 int p_put_nbr(va_list ap);
 int p_putstr(va_list ap);
+
+flags_t *init();
 
 #endif
