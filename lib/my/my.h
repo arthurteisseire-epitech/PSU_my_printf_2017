@@ -32,6 +32,7 @@ int p_putstr(va_list ap);
 int p_putoctal(va_list ap);
 int p_puthexa_low(va_list ap);
 int p_puthexa_up(va_list ap);
+int p_putbin(va_list ap);
 
 int exec(char *str, va_list ap);
 flags_t *init();
