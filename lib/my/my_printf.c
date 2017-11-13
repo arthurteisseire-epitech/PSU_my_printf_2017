@@ -17,27 +17,31 @@ static const flags_t tab[] = {
 int my_printf(char *str, ...)
 {
 	int i = 0;
+	int size = 0;
 	va_list ap;
 
 	va_start(ap, str);
 	while (*str != '\0') {
 		if (*str == '%') {
 			str++;
-			exec(str, ap);
+			size += exec(str, ap);
 			str++;
 		}
 		my_putchar(*str);
 		str++;
+		size++;
 	}
 	va_end(ap);
-	return (0);
+	return (size);
 }
 
-void exec(char *str, va_list ap)
+int exec(char *str, va_list ap)
 {
 	int i = 0;
+	int size;
 	
 	while (tab[i].flag != *str)
 		i++;
-	tab[i].f(ap);
+	size = tab[i].f(ap);
+	return (size);
 }

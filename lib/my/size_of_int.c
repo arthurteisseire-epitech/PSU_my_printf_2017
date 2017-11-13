@@ -9,6 +9,8 @@ int size_of_int(int nb)
 {
 	int size = 0;
 
+	if (nb < 0)
+		size++;
 	while (nb != 0) {
 		nb /= 10;
 		size++;

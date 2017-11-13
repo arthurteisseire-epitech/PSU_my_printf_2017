@@ -15,8 +15,8 @@ void redirect_all_std(void)
 	cr_redirect_stderr();
 }
 
-Test(my_printf, disp, .init = redirect_all_std)
+Test(my_printf, 1, .init = redirect_all_std)
 {
-	my_printf("toto %s\n", "lala");
-	cr_assert_stdout_eq_str("toto lala\n");
+	cr_assert(my_printf("toto et %s ont %d ans\n", "lala", -12) == 25);
+	cr_assert_stdout_eq_str("toto et lala ont -12 ans\n");
 }

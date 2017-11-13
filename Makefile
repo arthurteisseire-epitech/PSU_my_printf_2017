@@ -7,7 +7,8 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_printf.c \
 		$(DLIB)p_putchar.c \
 		$(DLIB)p_put_nbr.c \
-		$(DLIB)p_putstr.c
+		$(DLIB)p_putstr.c \
+		$(DLIB)size_of_int.c
 
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a
@@ -22,6 +23,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f ../../$(NAME)
 
-re:	fclean all clean
+re:	fclean all
+	make clean
