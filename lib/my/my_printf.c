@@ -15,12 +15,12 @@ static const flags_t tab[] = {
 	{'o', p_putoctal},
 	{'x', p_puthexa_low},
 	{'X', p_puthexa_up},
-	{'b', p_putbin}
+	{'b', p_putbin},
+	{'p', p_putptr}
 };
 
 int my_printf(char *str, ...)
 {
-	int i = 0;
 	int size = 0;
 	va_list ap;
 
@@ -43,7 +43,7 @@ int exec(char *str, va_list ap)
 {
 	int i = 0;
 	int size;
-	
+
 	while (tab[i].flag != *str)
 		i++;
 	size = tab[i].f(ap);

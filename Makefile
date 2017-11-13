@@ -12,6 +12,8 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)p_putoctal.c \
 		$(DLIB)p_puthexa_low.c \
 		$(DLIB)p_puthexa_up.c \
+		$(DLIB)p_putbin.c \
+		$(DLIB)p_putptr.c \
 		$(DLIB)size_of_int.c
 
 OBJ	=	$(SRC:.c=.o)
