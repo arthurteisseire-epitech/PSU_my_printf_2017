@@ -19,7 +19,7 @@ int my_printf(char *str, ...);
 
 int my_puterror(char const *str);
 int my_strlen(char const *str);
-int my_printf(char *s, ...);
+int size_of_int(int nb);
 
 void my_putchar(char c);
 int my_put_nbr(int nb);

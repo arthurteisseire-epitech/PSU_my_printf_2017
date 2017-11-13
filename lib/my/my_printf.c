@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2017
-** File Name : my_stdarg.c
+** File Name : my_printf.c
 ** File description:
 ** By Arthur Teisseire
 */
