@@ -16,7 +16,8 @@ static const flags_t tab[] = {
 	{'x', p_puthexa_low},
 	{'X', p_puthexa_up},
 	{'b', p_putbin},
-	{'p', p_putadress}
+	{'p', p_putadress},
+	{'S', p_putstr_oct}
 };
 
 int my_printf(char *str, ...)

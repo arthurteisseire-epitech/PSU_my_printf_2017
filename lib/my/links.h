@@ -16,5 +16,6 @@ int p_puthexa_low(va_list ap);
 int p_puthexa_up(va_list ap);
 int p_putbin(va_list ap);
 int p_putadress(va_list ap);
+int p_putstr_oct(va_list ap);
 
 #endif
