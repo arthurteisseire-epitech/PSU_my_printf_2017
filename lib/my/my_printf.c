@@ -27,6 +27,7 @@ int my_printf(char *str, ...)
 
 	va_start(ap, str);
 	while (*str != '\0') {
+		check_double_pourcent(&str);
 		if (*str == '%') {
 			str++;
 			size += exec(str, ap);
@@ -49,4 +50,12 @@ int exec(char *str, va_list ap)
 		i++;
 	size = tab[i].f(ap);
 	return (size);
+}
+
+void check_double_pourcent(char **str)
+{
+	while (str[0][0] == '%' && str[0][1] == '%') {
+		my_putchar('%');
+		*str += 2;
+	}
 }
