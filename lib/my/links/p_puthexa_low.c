@@ -12,6 +12,6 @@ int p_puthexa_low(va_list ap)
 	char *base = "0123456789abcdef";
 	int nb = va_arg(ap, int);
 
-	my_putnbr_base(nb, base);
+	return (my_putnbr_base(nb, base));
 	return (size_of_int(nb));
 }
