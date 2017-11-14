@@ -18,10 +18,7 @@ int my_putnbr_base(int nbr, char const *base)
 	if (nbr >= nb_base) {
 		my_putnbr_base(nbr / nb_base, base);
 		my_putchar(base[nbr % nb_base]);
-		size++;
-	} else {
+	} else
 		my_putchar(base[nbr % nb_base]);
-		size++;
-	}
-	return (size);
+	return (nbr);
 }
