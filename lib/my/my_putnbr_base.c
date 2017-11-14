@@ -10,15 +10,20 @@
 int my_putnbr_base(int nbr, char const *base)
 {
 	int nb_base = my_strlen(base);
+	int size = 0;
 
 	if (nbr < 0) {
 		nbr = -nbr;
 		my_putchar('-');
+		size++;
 	}
 	if (nbr >= nb_base) {
-		my_putnbr_base(nbr / nb_base, base);
+		size += my_putnbr_base(nbr / nb_base, base);
 		my_putchar(base[nbr % nb_base]);
-	} else
+		return (size + 1);
+	} else {
 		my_putchar(base[nbr % nb_base]);
-	return (nbr);
+		size++;
+	}
+	return (size);
 }
