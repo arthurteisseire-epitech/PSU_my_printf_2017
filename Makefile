@@ -7,7 +7,6 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_putadress.c \
 		$(DLIB)my_puterror.c \
 		$(DLIB)my_strlen.c \
-		$(DLIB)size_of_int.c \
 		$(DLIB)my_printf.c \
 		$(DLINK)p_putchar.c \
 		$(DLINK)p_put_nbr.c \

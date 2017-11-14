@@ -12,6 +12,5 @@ int p_putbin(va_list ap)
 	char *base = "01";
 	int nb = va_arg(ap, int);
 
-	my_putnbr_base(nb, base);
-	return (size_of_int(nb));
+	return (my_putnbr_base(nb, base));
 }

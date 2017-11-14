@@ -13,5 +13,4 @@ int p_puthexa_low(va_list ap)
 	int nb = va_arg(ap, int);
 
 	return (my_putnbr_base(nb, base));
-	return (size_of_int(nb));
 }

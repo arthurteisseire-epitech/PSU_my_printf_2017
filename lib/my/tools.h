@@ -10,6 +10,5 @@
 
 int my_puterror(char const *str);
 int my_strlen(char const *str);
-int size_of_int(int nb);
 
 #endif

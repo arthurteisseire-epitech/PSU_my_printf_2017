@@ -12,6 +12,5 @@ int p_putoctal(va_list ap)
 	char *base = "01234567";
 	int nb = va_arg(ap, int);
 
-	my_putnbr_base(nb, base);
-	return (size_of_int(nb));
+	return (my_putnbr_base(nb, base));
 }
