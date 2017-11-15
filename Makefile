@@ -22,6 +22,9 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DTOOLS)my_strlen.c \
 		$(DTOOLS)add_zeros.c \
 		$(DTOOLS)is_printable.c \
+		$(DTOOLS)handle_spaces.c \
+		$(DTOOLS)check_double_pourcent.c \
+		$(DTOOLS)delete_spaces.c \
 		$(DTOOLS)put_less_and_zero.c
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a

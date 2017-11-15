@@ -16,7 +16,7 @@
 #define NB_FLAGS 11
 
 int my_printf(char *str, ...);
-int exec(char *str, va_list ap);
+int exec(char **str, va_list ap);
 flags_t *init();
 int check_double_pourcent(char **str);
 

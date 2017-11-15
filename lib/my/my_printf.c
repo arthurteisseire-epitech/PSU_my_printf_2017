@@ -31,7 +31,7 @@ int my_printf(char *str, ...)
 		size += check_double_pourcent(&str);
 		if (*str == '%') {
 			str++;
-			size += exec(str, ap);
+			size += exec(&str, ap);
 			str++;
 		}
 		if (*str != '\0' && *str != '%') {
@@ -44,24 +44,13 @@ int my_printf(char *str, ...)
 	return (size);
 }
 
-int exec(char *str, va_list ap)
+int exec(char **str, va_list ap)
 {
 	int size = 0;
 
+	size += handle_spaces(str);
 	for (int it = 0; it < NB_FLAGS; it++)
-		if (flag_array[it].flag == *str)
-			size = flag_array[it].function(ap);
-	return (size);
-}
-
-int check_double_pourcent(char **str)
-{
-	int size = 0;
-
-	while (str[0][0] == '%' && str[0][1] == '%') {
-		my_putchar('%');
-		*str += 2;
-		size++;
-	}
+		if (flag_array[it].flag == **str)
+			size += flag_array[it].function(ap);
 	return (size);
 }
