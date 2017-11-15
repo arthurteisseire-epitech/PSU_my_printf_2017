@@ -1,12 +1,12 @@
 DLIB	=	$(realpath lib/my)/
+DTOOLS	=	$(DLIB)tools/
 DLINK	=	$(DLIB)links/
 SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_put_nbr.c \
 		$(DLIB)my_putstr.c \
 		$(DLIB)my_putnbr_base.c \
+		$(DLIB)my_putchar_base.c \
 		$(DLIB)my_putadress.c \
-		$(DLIB)my_puterror.c \
-		$(DLIB)my_strlen.c \
 		$(DLIB)my_printf.c \
 		$(DLINK)p_putchar.c \
 		$(DLINK)p_put_nbr.c \
@@ -16,7 +16,12 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLINK)p_puthexa_low.c \
 		$(DLINK)p_puthexa_up.c \
 		$(DLINK)p_putbin.c \
-		$(DLINK)p_putadress.c
+		$(DLINK)p_putadress.c \
+		$(DTOOLS)my_puterror.c \
+		$(DTOOLS)my_strlen.c \
+		$(DTOOLS)addZeros.c \
+		$(DTOOLS)is_printable.c \
+		$(DTOOLS)put_less_and_zero.c
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a
 

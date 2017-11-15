@@ -7,18 +7,18 @@
 
 #include "my.h"
 
-char my_putchar_base(char c, char const *base)
+int my_putchar_base(int nbr, char const *base)
 {
 	int nb_base = my_strlen(base);
+	int size = 0;
 
-	if (c < 0) {
-		c = -c;
-		my_putchar('-');
+	if (nbr >= nb_base) {
+		size += my_putchar_base(nbr / nb_base, base);
+		my_putchar(base[nbr % nb_base]);
+		return (size + 1);
+	} else {
+		my_putchar(base[nbr % nb_base]);
+		size++;
 	}
-	if (c >= nb_base) {
-		my_putchar_base(c / nb_base, base);
-		my_putchar(base[c % nb_base]);
-	} else
-		my_putchar(base[c % nb_base]);
-	return (c);
+	return (size);
 }

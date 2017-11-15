@@ -10,5 +10,8 @@
 
 int my_puterror(char const *str);
 int my_strlen(char const *str);
+int addZeros(int nbr);
+int is_printable(char c);
+int put_less_and_zero(int *nb);
 
 #endif
