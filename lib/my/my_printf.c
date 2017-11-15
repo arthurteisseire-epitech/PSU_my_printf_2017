@@ -27,15 +27,17 @@ int my_printf(char *str, ...)
 
 	va_start(ap, str);
 	while (*str != '\0') {
-		check_double_pourcent(&str);
+		size += check_double_pourcent(&str);
 		if (*str == '%') {
 			str++;
 			size += exec(str, ap);
 			str++;
 		}
-		my_putchar(*str);
-		str++;
-		size++;
+		if (*str != '\0') {
+			my_putchar(*str);
+			str++;
+			size++;
+		}
 	}
 	va_end(ap);
 	return (size);
@@ -51,10 +53,14 @@ int exec(char *str, va_list ap)
 	return (size);
 }
 
-void check_double_pourcent(char **str)
+int check_double_pourcent(char **str)
 {
+	int size = 0;
+
 	while (str[0][0] == '%' && str[0][1] == '%') {
 		my_putchar('%');
 		*str += 2;
+		size++;
 	}
+	return (size);
 }

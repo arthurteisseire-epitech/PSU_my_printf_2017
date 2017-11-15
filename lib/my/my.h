@@ -18,7 +18,7 @@
 int my_printf(char *str, ...);
 int exec(char *str, va_list ap);
 flags_t *init();
-void check_double_pourcent(char **str);
+int check_double_pourcent(char **str);
 
 void my_putchar(char c);
 int my_put_nbr(int nb);

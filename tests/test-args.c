@@ -69,3 +69,9 @@ Test(my_printf, str_oct, .init = redirect_all_std)
 	cr_assert(my_printf("%S\n", str) == 9);
 	cr_assert_stdout_eq_str(res);
 }
+
+Test(my_printf, pourcent, .init = redirect_all_std)
+{
+	cr_assert(my_printf("%%\n%%%%") == 4);
+	cr_assert_stdout_eq_str("%\n%%");
+}
