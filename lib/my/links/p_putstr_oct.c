@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "my.h"
+#include "../my.h"
 
 int is_printable(char c)
 {

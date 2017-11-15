@@ -11,6 +11,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLINK)p_putchar.c \
 		$(DLINK)p_put_nbr.c \
 		$(DLINK)p_putstr.c \
+		$(DLINK)p_putstr_oct.c \
 		$(DLINK)p_putoctal.c \
 		$(DLINK)p_puthexa_low.c \
 		$(DLINK)p_puthexa_up.c \
