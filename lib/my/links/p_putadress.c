@@ -11,7 +11,8 @@ int p_putadress(va_list ap)
 {
 	void *ptr = va_arg(ap, void *);
 	unsigned long int nb = (unsigned long int)ptr;
+	char const *base = "0123456789abcdef";
 
 	my_putstr("0x");
-	return (my_putadress(nb) + 2);
+	return (my_putnbr_base(nb, base) + 2);
 }

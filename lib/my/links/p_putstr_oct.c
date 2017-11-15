@@ -24,7 +24,7 @@ int p_putstr_oct(va_list ap)
 			my_putchar('\\');
 			size++;
 			size += put_less_and_zero(&nb);
-			size += my_putchar_base(nb, base);
+			size += my_putnbr_base(nb, base);
 		}
 		i++;
 	}
