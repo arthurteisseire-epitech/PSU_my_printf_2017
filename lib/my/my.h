@@ -13,7 +13,7 @@
 #include "links.h"
 #include "struct.h"
 
-#define NB_FLAGS 10
+#define NB_FLAGS 11
 
 int my_printf(char *str, ...);
 int exec(char *str, va_list ap);
@@ -22,8 +22,9 @@ int check_double_pourcent(char **str);
 
 void my_putchar(char c);
 int my_put_nbr(int nb);
+int my_put_unsigned(unsigned int nb);
 int my_putstr(char const *str);
-int my_putnbr_base(int nbr, char const *base);
+int my_putnbr_base(unsigned int nbr, char const *base);
 int my_putchar_base(int nbr, char const *base);
 int my_putadress(unsigned long int nbr);
 

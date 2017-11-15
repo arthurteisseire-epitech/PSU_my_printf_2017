@@ -36,6 +36,14 @@ Test(my_printf, number, .init = redirect_all_std)
 	cr_assert_stdout_eq_str("-8773043 == -8773043 == -8773043\n");
 }
 
+Test(my_printf, unsigned, .init = redirect_all_std)
+{
+	int nb = 4294967293;
+
+	cr_assert(my_printf("4294967293 == %u\n", nb) == 25);
+	cr_assert_stdout_eq_str("4294967293 == 4294967293\n");
+}
+
 Test(my_printf, octal, .init = redirect_all_std)
 {
 	int nb = 10000;
@@ -63,10 +71,10 @@ Test(my_printf, bin, .init = redirect_all_std)
 Test(my_printf, str_oct, .init = redirect_all_std)
 {
 	char str[] = "toto";
-	char *res = "t\\-157to\n";
+	char *res = "t\\177to\n";
 
-	str[1] = -111;
-	cr_assert(my_printf("%S\n", str) == 9);
+	str[1] = 127;
+	cr_assert(my_printf("%S\n", str) == 8);
 	cr_assert_stdout_eq_str(res);
 }
 

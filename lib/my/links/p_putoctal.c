@@ -10,7 +10,7 @@
 int p_putoctal(va_list ap)
 {
 	char *base = "01234567";
-	int nb = va_arg(ap, int);
+	unsigned int nb = va_arg(ap, unsigned int);
 
 	return (my_putnbr_base(nb, base));
 }

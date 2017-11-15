@@ -12,6 +12,7 @@ static const flags_t flag_array[NB_FLAGS] = {
 	{'s', p_putstr},
 	{'d', p_put_nbr},
 	{'i', p_put_nbr},
+	{'u', p_put_unsigned},
 	{'o', p_putoctal},
 	{'x', p_puthexa_low},
 	{'X', p_puthexa_up},
