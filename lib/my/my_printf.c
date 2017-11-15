@@ -34,7 +34,7 @@ int my_printf(char *str, ...)
 			size += exec(str, ap);
 			str++;
 		}
-		if (*str != '\0') {
+		if (*str != '\0' && *str != '%') {
 			my_putchar(*str);
 			str++;
 			size++;
