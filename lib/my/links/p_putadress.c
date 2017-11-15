@@ -13,6 +13,5 @@ int p_putadress(va_list ap)
 	unsigned long int nb = (unsigned long int)ptr;
 
 	my_putstr("0x");
-	my_putadress(nb);
-	return (SIZE_OF_ADRESS + 2);
+	return (my_putadress(nb) + 2);
 }
