@@ -20,7 +20,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLINK)p_putadress.c \
 		$(DTOOLS)my_puterror.c \
 		$(DTOOLS)my_strlen.c \
-		$(DTOOLS)addZeros.c \
+		$(DTOOLS)add_zeros.c \
 		$(DTOOLS)is_printable.c \
 		$(DTOOLS)put_less_and_zero.c
 OBJ	=	$(SRC:.c=.o)
@@ -30,13 +30,12 @@ all: $(NAME)
 
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
-	mv $(NAME) $(DLIB)
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(DLIB)$(NAME)
+	rm -f $(NAME)
 
 re:	fclean all
 	make clean
