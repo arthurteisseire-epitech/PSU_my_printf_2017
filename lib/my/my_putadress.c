@@ -21,4 +21,4 @@ int my_putadress(unsigned long int nbr, char const *base)
 		size++;
 	}
 	return (size);
-}    
+}
