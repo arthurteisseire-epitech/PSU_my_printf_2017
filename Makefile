@@ -30,12 +30,13 @@ all: $(NAME)
 
 $(NAME):	$(OBJ)
 	ar rc $(NAME) $(OBJ)
+	mv $(NAME) $(DLIB)
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(DLIB)$(NAME)
 
 re:	fclean all
 	make clean

@@ -6,7 +6,7 @@
 ##
 
 INC	=	$(realpath ../lib/my)
-DLIB	=	$(realpath ..)
+DLIB	=	$(realpath ../lib/my)
 LIB	=	my
 DSRC_UT	=	$(realpath .)
 SRC_UT	=	$(DSRC_UT)/test-args.c
