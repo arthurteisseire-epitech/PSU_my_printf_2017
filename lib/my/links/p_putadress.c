@@ -14,5 +14,5 @@ int p_putadress(va_list ap)
 	char const *base = "0123456789abcdef";
 
 	my_putstr("0x");
-	return (my_putnbr_base(nb, base) + 2);
+	return (my_putadress(nb, base) + 2);
 }

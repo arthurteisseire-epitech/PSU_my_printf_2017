@@ -25,7 +25,7 @@ int my_put_nbr(int nb);
 int my_put_unsigned(unsigned int nb);
 int my_putstr(char const *str);
 int my_putnbr_base(unsigned int nbr, char const *base);
+int my_putadress(unsigned long int nbr, char const *base);
 int my_putchar_base(int nbr, char const *base);
-int my_putadress(unsigned long int nbr);
 
 #endif
