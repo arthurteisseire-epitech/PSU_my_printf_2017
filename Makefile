@@ -6,6 +6,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DLIB)my_put_unsigned.c \
 		$(DLIB)my_putstr.c \
 		$(DLIB)my_putnbr_base.c \
+		$(DLIB)my_putadress.c \
 		$(DLIB)my_printf.c \
 		$(DLINK)p_putchar.c \
 		$(DLINK)p_put_nbr.c \
