@@ -10,7 +10,7 @@
 
 typedef struct flags {
 	char flag;
-	int (*f)(va_list);
+	int (*function)(va_list);
 } flags_t;
 
 #endif

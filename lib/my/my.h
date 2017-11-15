@@ -13,6 +13,8 @@
 #include "links.h"
 #include "struct.h"
 
+#define NB_FLAGS 10
+
 int my_printf(char *str, ...);
 int exec(char *str, va_list ap);
 flags_t *init();

@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-static const flags_t tab[] = {
+static const flags_t flag_array[NB_FLAGS] = {
 	{'c', p_putchar},
 	{'s', p_putstr},
 	{'d', p_put_nbr},
@@ -43,12 +43,11 @@ int my_printf(char *str, ...)
 
 int exec(char *str, va_list ap)
 {
-	int i = 0;
-	int size;
+	int size = 0;
 
-	while (tab[i].flag != *str)
-		i++;
-	size = tab[i].f(ap);
+	for (int it = 0; it < NB_FLAGS; it++)
+		if (flag_array[it].flag == *str)
+			size = flag_array[it].function(ap);
 	return (size);
 }
 
