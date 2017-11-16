@@ -5,7 +5,7 @@
 ## Arthur Teisseire
 ##
 
-INC	=	$(realpath ../lib/my)
+INC	=	$(realpath ../lib/my/include)
 DLIB	=	$(realpath ..)
 LIB	=	my
 DSRC_UT	=	$(realpath .)

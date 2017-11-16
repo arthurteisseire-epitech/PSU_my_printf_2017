@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "../my.h"
+#include "my.h"
 
 int p_puthexa_up(va_list ap)
 {

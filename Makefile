@@ -1,4 +1,5 @@
 DLIB	=	$(realpath lib/my)/
+DINC	=	$(DLIB)include/
 DTOOLS	=	$(DLIB)tools/
 DLINK	=	$(DLIB)links/
 SRC	=	$(DLIB)my_putchar.c \
@@ -26,6 +27,7 @@ SRC	=	$(DLIB)my_putchar.c \
 		$(DTOOLS)check_double_pourcent.c \
 		$(DTOOLS)delete_spaces.c \
 		$(DTOOLS)put_less_and_zero.c
+CFLAGS	+=	-I $(DINC)
 OBJ	=	$(SRC:.c=.o)
 NAME	=	libmy.a
 

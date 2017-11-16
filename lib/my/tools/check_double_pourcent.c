@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-void my_putchar(char c);
+#include "my.h"
 
 int check_double_pourcent(char **str)
 {

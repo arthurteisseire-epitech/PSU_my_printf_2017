@@ -5,7 +5,7 @@
 ** By Arthur Teisseire
 */
 
-#include "../my.h"
+#include "my.h"
 
 int put_less_and_zero(int *nb)
 {
@@ -16,6 +16,6 @@ int put_less_and_zero(int *nb)
 		my_putchar('-');
 		size++;
 	}
-	size += addZeros(*nb);
+	size += add_zeros(*nb);
 	return (size);
 }

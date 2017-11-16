@@ -5,9 +5,9 @@
 ** By Arthur Teisseire
 */
 
-void my_putchar(char c);
+#include "my.h"
 
-int addZeros(int nbr)
+int add_zeros(int nbr)
 {
 	int size_max = 3;
 	int size = 0;
