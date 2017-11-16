@@ -83,3 +83,9 @@ Test(my_printf, pourcent, .init = redirect_all_std)
 	cr_assert(my_printf("%%\n%%%%") == 4);
 	cr_assert_stdout_eq_str("%\n%%");
 }
+
+Test(my_printf, adress_null, .init = redirect_all_std)
+{
+	cr_assert(my_printf("%S\n", 0) == 7);
+	cr_assert_stdout_eq_str("(null)\n");
+}
