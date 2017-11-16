@@ -9,5 +9,9 @@
 
 int p_putstr(va_list ap)
 {
-	return (my_putstr(va_arg(ap, char *)));
+	char *str = va_arg(ap, char *);
+
+	if (str == 0)
+		return (my_putstr("(null)"));
+	return (my_putstr(str));
 }
