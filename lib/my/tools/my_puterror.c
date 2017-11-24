@@ -5,9 +5,7 @@
 ** Day04
 */
 
-#include <unistd.h>
-
-int my_strlen(char const *str);
+#include "my.h"
 
 int my_puterror(char const *str)
 {

@@ -8,6 +8,7 @@
 #ifndef MY_H
 #define MY_H
 
+#include <unistd.h>
 #include <stdarg.h>
 #include "tools.h"
 #include "links.h"
